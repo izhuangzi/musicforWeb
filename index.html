@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>QQ-music</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        ~function () {
+            computedFont();
+            window.addEventListener('resize',computedFont,false);
+            function computedFont() {
+                var deviceW = document.documentElement.clientWidth;
+                if(deviceW>640)return;
+                document.documentElement.style.fontSize = deviceW/640*100+'px';
+            }
+        }();
+    </script>
+</head>
+<body>
+<section class="musicBox">
+    <audio src="img/myDream.m4a" preload="none" id="musicAudio"></audio>
+    <div class="backgroundImg"></div>
+    <div class="background"></div>
+    <!--HEADER-->
+    <header class="header">
+        <div class="headTxt">
+            <img src="img/myDream.jpg" alt="">
+            <h2>
+                <span>我的梦</span>
+                <span>张靓颖</span>
+            </h2>
+        </div>
+        <a href="javascript:;" class="musicBtn"></a>
+    </header>
+    <!--MAIN-->
+    <main class="main">
+        <div class="wrapper">
+            <p>你说梦别停留等待</p>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="progress">
+            <span class="curTime">00:00</span>
+            <span class="duration">03:23</span>
+            <div class="timeLine">
+                <div class="current"></div>
+            </div>
+        </div>
+        <a href="javascript:;" class="down">下载这首音乐</a>
+    </footer>
+</section>
+<script src="js/zepto.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
